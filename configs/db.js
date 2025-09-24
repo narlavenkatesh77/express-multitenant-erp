@@ -12,5 +12,5 @@ export const centralDb = new Sequelize(
     port: process.env.CENTRAL_DB_PORT,
     dialect: "postgres",
     logging: false,
-  }
+  } 
 );
