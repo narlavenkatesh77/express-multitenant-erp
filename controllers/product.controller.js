@@ -3,7 +3,7 @@ import asyncHandler from "../utils/asynchandler.js";
 
 export const addProduct = asyncHandler(async (req, res) => {
   const { name, price } = req.body;
-  const { Product } = req.tenantDb;
+  const { Product } = req.tenantDb;  
 
   const product = await Product.create({ name, price });
   res.json(new ApiResponse(201, product, "Product added"));
